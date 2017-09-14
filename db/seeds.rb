@@ -7,6 +7,6 @@ Event.create([
 {name: 'Miami Dolphins vs. Buffalo Bills', event_type: 'football', state: 'FL', zip: 48104, price: 150},
 {name: 'Carolina Panthers vs. Atlanta Falcons', event_type: 'football', state: 'NC', zip: 48104, price: 150},
 {name: 'Atlanta Falcons vs. New Orleans Saints', event_type: 'football', state: 'GA', zip: 48104, price: 150},
-{name: 'Detroit Tigers vs. Kansas City Royals', event_type: 'football', state: 'MI', zip: 48104, price: 150},
+{name: 'Detroit Tigers vs. Kansas City Royals', event_type: 'baseball', state: 'MI', zip: 48104, price: 150},
 {name: 'Detroit Lions vs. Green Bay Packers', event_type: 'football', state: 'MI', zip: 48104, price: 150},
 ])
