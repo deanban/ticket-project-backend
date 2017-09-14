@@ -3567,3 +3567,1274 @@ No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type:
 Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 13:21:04 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, created_at: "2017-09-14 13:58:19", updated_at: "2017-09-14 13:58:19">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (2.8ms)
+Completed 200 OK in 43ms (Views: 31.0ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 13:21:07 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, created_at: "2017-09-14 13:58:19", updated_at: "2017-09-14 13:58:19">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (2.86ms)
+Completed 200 OK in 34ms (Views: 20.7ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 15:30:14 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, created_at: "2017-09-14 13:58:19", updated_at: "2017-09-14 13:58:19">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (3.15ms)
+Completed 200 OK in 41ms (Views: 28.1ms | ActiveRecord: 9.8ms)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (204.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (199.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (442.9ms)[0m  [1m[35mCREATE DATABASE "tickettracker_development" ENCODING = 'unicode'[0m
+  [1m[35m (414.1ms)[0m  [1m[35mCREATE DATABASE "tickettracker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 19:38:22.206431"], ["updated_at", "2017-09-14 19:38:22.206431"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 19:38:22.287290"], ["updated_at", "2017-09-14 19:38:22.287290"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (206.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (203.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (373.5ms)[0m  [1m[35mCREATE DATABASE "tickettracker_development" ENCODING = 'unicode'[0m
+  [1m[35m (407.8ms)[0m  [1m[35mCREATE DATABASE "tickettracker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 19:39:56.632490"], ["updated_at", "2017-09-14 19:39:56.632490"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 19:39:56.712862"], ["updated_at", "2017-09-14 19:39:56.712862"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (167.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (200.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(144775568178519075)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20170912152617)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170912152617"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 19:40:32.153219"], ["updated_at", "2017-09-14 19:40:32.153219"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(144775568178519075)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bruno Mars"], ["event_type", "concert"], ["state", "NY"], ["zip", 11021], ["price", 100], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.715417"], ["updated_at", "2017-09-14 19:40:40.715417"]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Jets vs. New England Patriots"], ["event_type", "football"], ["state", "NY"], ["zip", 11021], ["price", 100], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.727368"], ["updated_at", "2017-09-14 19:40:40.727368"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bon Jovi"], ["event_type", "concert"], ["state", "NY"], ["zip", 11021], ["price", 100], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.732302"], ["updated_at", "2017-09-14 19:40:40.732302"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Flatiron Presents"], ["event_type", "concert"], ["state", "NY"], ["zip", 11021], ["price", 100], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.737753"], ["updated_at", "2017-09-14 19:40:40.737753"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Yankees vs. Boston Red Sox"], ["event_type", "baseball"], ["state", "NY"], ["zip", 10451], ["price", 200], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.741695"], ["updated_at", "2017-09-14 19:40:40.741695"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miami Dolphins vs. Buffalo Bills"], ["event_type", "football"], ["state", "FL"], ["zip", 48104], ["price", 150], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.745806"], ["updated_at", "2017-09-14 19:40:40.745806"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carolina Panthers vs. Atlanta Falcons"], ["event_type", "football"], ["state", "NC"], ["zip", 48104], ["price", 150], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.750008"], ["updated_at", "2017-09-14 19:40:40.750008"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Atlanta Falcons vs. New Orleans Saints"], ["event_type", "football"], ["state", "GA"], ["zip", 48104], ["price", 150], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.755171"], ["updated_at", "2017-09-14 19:40:40.755171"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Tigers vs. Kansas City Royals"], ["event_type", "baseball"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.759164"], ["updated_at", "2017-09-14 19:40:40.759164"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Lions vs. Green Bay Packers"], ["event_type", "football"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 80.0], ["lng", 50.0], ["created_at", "2017-09-14 19:40:40.763263"], ["updated_at", "2017-09-14 19:40:40.763263"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 15:41:01 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 80.0, lng: 50.0, created_at: "2017-09-14 19:40:40", updated_at: "2017-09-14 19:40:40">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (3.61ms)
+Completed 200 OK in 47ms (Views: 29.9ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 15:42:08 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 80.0, lng: 50.0, created_at: "2017-09-14 19:40:40", updated_at: "2017-09-14 19:40:40">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (5.12ms)
+Completed 200 OK in 47ms (Views: 25.0ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 15:43:42 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 80.0, lng: 50.0, created_at: "2017-09-14 19:40:40", updated_at: "2017-09-14 19:40:40">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (3.08ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 15:43:53 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 80.0, lng: 50.0, created_at: "2017-09-14 19:40:40", updated_at: "2017-09-14 19:40:40">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (5.75ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (200.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (204.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (415.8ms)[0m  [1m[35mCREATE DATABASE "tickettracker_development" ENCODING = 'unicode'[0m
+  [1m[35m (413.0ms)[0m  [1m[35mCREATE DATABASE "tickettracker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 19:52:24.332295"], ["updated_at", "2017-09-14 19:52:24.332295"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 19:52:24.413703"], ["updated_at", "2017-09-14 19:52:24.413703"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (199.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (209.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(144775568178519075)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEvents (20170912152617)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170912152617"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 19:52:47.156065"], ["updated_at", "2017-09-14 19:52:47.156065"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(144775568178519075)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bruno Mars"], ["event_type", "concert"], ["state", "NY"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 19:53:26.599252"], ["updated_at", "2017-09-14 19:53:26.599252"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Jets vs. New England Patriots"], ["event_type", "football"], ["state", "NY"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 19:53:26.605321"], ["updated_at", "2017-09-14 19:53:26.605321"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bon Jovi"], ["event_type", "concert"], ["state", "NY"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 19:53:26.608768"], ["updated_at", "2017-09-14 19:53:26.608768"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Flatiron Presents"], ["event_type", "concert"], ["state", "NY"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 19:53:26.612047"], ["updated_at", "2017-09-14 19:53:26.612047"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Yankees vs. Boston Red Sox"], ["event_type", "baseball"], ["state", "NY"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 19:53:26.616195"], ["updated_at", "2017-09-14 19:53:26.616195"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miami Dolphins vs. Buffalo Bills"], ["event_type", "football"], ["state", "FL"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 19:53:26.620463"], ["updated_at", "2017-09-14 19:53:26.620463"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carolina Panthers vs. Atlanta Falcons"], ["event_type", "football"], ["state", "NC"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 19:53:26.624063"], ["updated_at", "2017-09-14 19:53:26.624063"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Atlanta Falcons vs. New Orleans Saints"], ["event_type", "football"], ["state", "GA"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 19:53:26.627687"], ["updated_at", "2017-09-14 19:53:26.627687"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Tigers vs. Kansas City Royals"], ["event_type", "baseball"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 19:53:26.631278"], ["updated_at", "2017-09-14 19:53:26.631278"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Lions vs. Green Bay Packers"], ["event_type", "football"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 19:53:26.635307"], ["updated_at", "2017-09-14 19:53:26.635307"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "University of Michigan vs. Ohio State Buckeyes"], ["event_type", "football"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 19:53:26.639384"], ["updated_at", "2017-09-14 19:53:26.639384"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 15:53:40 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 19:53:26", updated_at: "2017-09-14 19:53:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (4.66ms)
+Completed 200 OK in 43ms (Views: 31.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 15:54:52 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 19:53:26", updated_at: "2017-09-14 19:53:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (8.99ms)
+Completed 200 OK in 65ms (Views: 30.0ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 15:59:24 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 19:53:26", updated_at: "2017-09-14 19:53:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (6.33ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 15:59:54 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 19:53:26", updated_at: "2017-09-14 19:53:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (7.2ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 16:00:32 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 19:53:26", updated_at: "2017-09-14 19:53:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (8.55ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 16:01:17 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (3.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 19:53:26", updated_at: "2017-09-14 19:53:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (6.41ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 17:04:31 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "concert", state: "NY", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 19:53:26", updated_at: "2017-09-14 19:53:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (7.85ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (214.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (205.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (449.6ms)[0m  [1m[35mCREATE DATABASE "tickettracker_development" ENCODING = 'unicode'[0m
+  [1m[35m (406.8ms)[0m  [1m[35mCREATE DATABASE "tickettracker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 21:19:17.578311"], ["updated_at", "2017-09-14 21:19:17.578311"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 21:19:17.663599"], ["updated_at", "2017-09-14 21:19:17.663599"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bruno Mars"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:19:17.714469"], ["updated_at", "2017-09-14 21:19:17.714469"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Jets vs. New England Patriots"], ["event_type", "Football"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:19:17.717986"], ["updated_at", "2017-09-14 21:19:17.717986"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bon Jovi"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:19:17.720290"], ["updated_at", "2017-09-14 21:19:17.720290"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Flatiron Presents"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:19:17.722386"], ["updated_at", "2017-09-14 21:19:17.722386"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Yankees vs. Boston Red Sox"], ["event_type", "Baseball"], ["state", "New York"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:19:17.724419"], ["updated_at", "2017-09-14 21:19:17.724419"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miami Dolphins vs. Buffalo Bills"], ["event_type", "Football"], ["state", "Florida"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:19:17.726742"], ["updated_at", "2017-09-14 21:19:17.726742"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carolina Panthers vs. Atlanta Falcons"], ["event_type", "Football"], ["state", "North Carolina"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:19:17.729327"], ["updated_at", "2017-09-14 21:19:17.729327"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Atlanta Falcons vs. New Orleans Saints"], ["event_type", "Football"], ["state", "Georgia"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:19:17.732131"], ["updated_at", "2017-09-14 21:19:17.732131"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Tigers vs. Kansas City Royals"], ["event_type", "Baseball"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:19:17.735580"], ["updated_at", "2017-09-14 21:19:17.735580"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Lions vs. Green Bay Packers"], ["event_type", "Football"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:19:17.738163"], ["updated_at", "2017-09-14 21:19:17.738163"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "University of Michigan vs. Ohio State Buckeyes"], ["event_type", "Football"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:19:17.740673"], ["updated_at", "2017-09-14 21:19:17.740673"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Los Angeles Chargers vs. Denver Broncos"], ["event_type", "Football"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:19:17.742905"], ["updated_at", "2017-09-14 21:19:17.742905"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Los Angeles Clippers vs. Los Angeles Lakers"], ["event_type", "Basketball"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:19:17.746186"], ["updated_at", "2017-09-14 21:19:17.746186"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Katy Perry"], ["event_type", "Concert"], ["state", "CA"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:19:17.748796"], ["updated_at", "2017-09-14 21:19:17.748796"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Colorado Rockies vs. Arizona Diamondbacks"], ["event_type", "Baseball"], ["state", "Colorado"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:19:17.751381"], ["updated_at", "2017-09-14 21:19:17.751381"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Alabama Crimson Tide vs. LSU Tigers"], ["event_type", "Football"], ["state", "Alabama"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:19:17.754892"], ["updated_at", "2017-09-14 21:19:17.754892"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Iditarod Race of the Century"], ["event_type", "Misc"], ["state", "Alaska"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:19:17.757776"], ["updated_at", "2017-09-14 21:19:17.757776"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Arizona Cardinals vs. Seattle Seahawks"], ["event_type", "Football"], ["state", "Arizona"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:19:17.760907"], ["updated_at", "2017-09-14 21:19:17.760907"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Phoenix Suns vs. Sacramento Kings"], ["event_type", "Basketball"], ["state", "Arizona"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:19:17.764894"], ["updated_at", "2017-09-14 21:19:17.764894"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hilary Clinton Rally"], ["event_type", "Misc"], ["state", "Arkansas"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:19:17.768417"], ["updated_at", "2017-09-14 21:19:17.768417"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "UCONN Huskies vs. Rutgers Scarlet Knights"], ["event_type", "Basketball"], ["state", "Connecticut"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:19:17.771058"], ["updated_at", "2017-09-14 21:19:17.771058"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "PHISH"], ["event_type", "Concert"], ["state", "Connecticut"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:19:17.773591"], ["updated_at", "2017-09-14 21:19:17.773591"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "A Day in the Life of Joe Biden: The Joe Biden Experience"], ["event_type", "Misc"], ["state", "Delaware"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:19:17.776149"], ["updated_at", "2017-09-14 21:19:17.776149"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ultra Music Festival"], ["event_type", "Concert"], ["state", "Florida"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:19:17.778489"], ["updated_at", "2017-09-14 21:19:17.778489"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "On the Set: Walking Dead"], ["event_type", "Misc"], ["state", "Georgia"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:19:17.781074"], ["updated_at", "2017-09-14 21:19:17.781074"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hawaii Rainbow Warriors vs. SDSU Aztecs"], ["event_type", "Football"], ["state", "Hawaii"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:19:17.784040"], ["updated_at", "2017-09-14 21:19:17.784040"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "2017 Surf Championships"], ["event_type", "Misc"], ["state", "Hawaii"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:19:17.787573"], ["updated_at", "2017-09-14 21:19:17.787573"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Potato Eating Contest"], ["event_type", "Misc"], ["state", "Idaho"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:19:17.791354"], ["updated_at", "2017-09-14 21:19:17.791354"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Boise State Broncos"], ["event_type", "Football"], ["state", "NC"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:19:17.795117"], ["updated_at", "2017-09-14 21:19:17.795117"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Atlanta Falcons vs. New Orleans Saints"], ["event_type", "Football"], ["state", "GA"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:19:17.798818"], ["updated_at", "2017-09-14 21:19:17.798818"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Tigers vs. Kansas City Royals"], ["event_type", "baseball"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:19:17.802049"], ["updated_at", "2017-09-14 21:19:17.802049"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Lions vs. Green Bay Packers"], ["event_type", "Football"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:19:17.805479"], ["updated_at", "2017-09-14 21:19:17.805479"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "University of Michigan vs. Ohio State Buckeyes"], ["event_type", "Football"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:19:17.809040"], ["updated_at", "2017-09-14 21:19:17.809040"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bruno Mars"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:19:17.812107"], ["updated_at", "2017-09-14 21:19:17.812107"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Jets vs. New England Patriots"], ["event_type", "Football"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:19:17.814885"], ["updated_at", "2017-09-14 21:19:17.814885"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bon Jovi"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:19:17.817308"], ["updated_at", "2017-09-14 21:19:17.817308"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Flatiron Presents"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:19:17.820246"], ["updated_at", "2017-09-14 21:19:17.820246"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Yankees vs. Boston Red Sox"], ["event_type", "baseball"], ["state", "New York"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:19:17.823004"], ["updated_at", "2017-09-14 21:19:17.823004"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miami Dolphins vs. Buffalo Bills"], ["event_type", "Football"], ["state", "FL"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:19:17.825212"], ["updated_at", "2017-09-14 21:19:17.825212"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carolina Panthers vs. Atlanta Falcons"], ["event_type", "Football"], ["state", "NC"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:19:17.827522"], ["updated_at", "2017-09-14 21:19:17.827522"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Atlanta Falcons vs. New Orleans Saints"], ["event_type", "Football"], ["state", "GA"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:19:17.830110"], ["updated_at", "2017-09-14 21:19:17.830110"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Tigers vs. Kansas City Royals"], ["event_type", "baseball"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:19:17.832705"], ["updated_at", "2017-09-14 21:19:17.832705"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Lions vs. Green Bay Packers"], ["event_type", "Football"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:19:17.835112"], ["updated_at", "2017-09-14 21:19:17.835112"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "University of Michigan vs. Ohio State Buckeyes"], ["event_type", "Football"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:19:17.837187"], ["updated_at", "2017-09-14 21:19:17.837187"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bruno Mars"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:19:17.839394"], ["updated_at", "2017-09-14 21:19:17.839394"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Jets vs. New England Patriots"], ["event_type", "Football"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:19:17.841423"], ["updated_at", "2017-09-14 21:19:17.841423"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bon Jovi"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:19:17.843614"], ["updated_at", "2017-09-14 21:19:17.843614"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Flatiron Presents"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:19:17.845914"], ["updated_at", "2017-09-14 21:19:17.845914"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Yankees vs. Boston Red Sox"], ["event_type", "baseball"], ["state", "New York"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:19:17.848276"], ["updated_at", "2017-09-14 21:19:17.848276"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miami Dolphins vs. Buffalo Bills"], ["event_type", "Football"], ["state", "FL"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:19:17.850928"], ["updated_at", "2017-09-14 21:19:17.850928"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carolina Panthers vs. Atlanta Falcons"], ["event_type", "Football"], ["state", "NC"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:19:17.853779"], ["updated_at", "2017-09-14 21:19:17.853779"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Atlanta Falcons vs. New Orleans Saints"], ["event_type", "Football"], ["state", "GA"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:19:17.857087"], ["updated_at", "2017-09-14 21:19:17.857087"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Tigers vs. Kansas City Royals"], ["event_type", "baseball"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:19:17.859771"], ["updated_at", "2017-09-14 21:19:17.859771"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Lions vs. Green Bay Packers"], ["event_type", "Football"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:19:17.862775"], ["updated_at", "2017-09-14 21:19:17.862775"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "University of Michigan vs. Ohio State Buckeyes"], ["event_type", "Football"], ["state", "MI"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:19:17.865897"], ["updated_at", "2017-09-14 21:19:17.865897"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 17:19:46 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 21:19:17", updated_at: "2017-09-14 21:19:17">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (16.86ms)
+Completed 200 OK in 65ms (Views: 50.7ms | ActiveRecord: 10.7ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (207.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (208.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (403.6ms)[0m  [1m[35mCREATE DATABASE "tickettracker_development" ENCODING = 'unicode'[0m
+  [1m[35m (420.6ms)[0m  [1m[35mCREATE DATABASE "tickettracker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 21:32:29.380787"], ["updated_at", "2017-09-14 21:32:29.380787"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 21:32:29.466781"], ["updated_at", "2017-09-14 21:32:29.466781"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bruno Mars"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:32:29.530489"], ["updated_at", "2017-09-14 21:32:29.530489"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Jets vs. New England Patriots"], ["event_type", "Football"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:32:29.533955"], ["updated_at", "2017-09-14 21:32:29.533955"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bon Jovi"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:32:29.536250"], ["updated_at", "2017-09-14 21:32:29.536250"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Flatiron Presents"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:32:29.538898"], ["updated_at", "2017-09-14 21:32:29.538898"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Yankees vs. Boston Red Sox"], ["event_type", "Baseball"], ["state", "New York"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:32:29.541686"], ["updated_at", "2017-09-14 21:32:29.541686"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miami Dolphins vs. Buffalo Bills"], ["event_type", "Football"], ["state", "Florida"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:32:29.544761"], ["updated_at", "2017-09-14 21:32:29.544761"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carolina Panthers vs. Atlanta Falcons"], ["event_type", "Football"], ["state", "North Carolina"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:32:29.548057"], ["updated_at", "2017-09-14 21:32:29.548057"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Atlanta Falcons vs. New Orleans Saints"], ["event_type", "Football"], ["state", "Georgia"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:32:29.551518"], ["updated_at", "2017-09-14 21:32:29.551518"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Tigers vs. Kansas City Royals"], ["event_type", "Baseball"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:32:29.554740"], ["updated_at", "2017-09-14 21:32:29.554740"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Lions vs. Green Bay Packers"], ["event_type", "Football"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:32:29.558773"], ["updated_at", "2017-09-14 21:32:29.558773"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "University of Michigan vs. Ohio State Buckeyes"], ["event_type", "Football"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:32:29.561315"], ["updated_at", "2017-09-14 21:32:29.561315"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Los Angeles Chargers vs. Denver Broncos"], ["event_type", "Football"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:32:29.563757"], ["updated_at", "2017-09-14 21:32:29.563757"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Los Angeles Clippers vs. Los Angeles Lakers"], ["event_type", "Basketball"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:32:29.566461"], ["updated_at", "2017-09-14 21:32:29.566461"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Katy Perry"], ["event_type", "Concert"], ["state", "CA"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:32:29.569863"], ["updated_at", "2017-09-14 21:32:29.569863"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Colorado Rockies vs. Arizona Diamondbacks"], ["event_type", "Baseball"], ["state", "Colorado"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:32:29.573692"], ["updated_at", "2017-09-14 21:32:29.573692"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Alabama Crimson Tide vs. LSU Tigers"], ["event_type", "Football"], ["state", "Alabama"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:32:29.576531"], ["updated_at", "2017-09-14 21:32:29.576531"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Iditarod Race of the Century"], ["event_type", "Misc"], ["state", "Alaska"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:32:29.579747"], ["updated_at", "2017-09-14 21:32:29.579747"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Arizona Cardinals vs. Seattle Seahawks"], ["event_type", "Football"], ["state", "Arizona"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:32:29.582741"], ["updated_at", "2017-09-14 21:32:29.582741"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Phoenix Suns vs. Sacramento Kings"], ["event_type", "Basketball"], ["state", "Arizona"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:32:29.586631"], ["updated_at", "2017-09-14 21:32:29.586631"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hilary Clinton Rally"], ["event_type", "Misc"], ["state", "Arkansas"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:32:29.590597"], ["updated_at", "2017-09-14 21:32:29.590597"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "UCONN Huskies vs. Rutgers Scarlet Knights"], ["event_type", "Basketball"], ["state", "Connecticut"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:32:29.594159"], ["updated_at", "2017-09-14 21:32:29.594159"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "PHISH"], ["event_type", "Concert"], ["state", "Connecticut"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:32:29.597520"], ["updated_at", "2017-09-14 21:32:29.597520"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "A Day in the Life of Joe Biden: The Joe Biden Experience"], ["event_type", "Misc"], ["state", "Delaware"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:32:29.600981"], ["updated_at", "2017-09-14 21:32:29.600981"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ultra Music Festival"], ["event_type", "Concert"], ["state", "Florida"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:32:29.604753"], ["updated_at", "2017-09-14 21:32:29.604753"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "On the Set: Walking Dead"], ["event_type", "Misc"], ["state", "Georgia"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:32:29.608517"], ["updated_at", "2017-09-14 21:32:29.608517"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hawaii Rainbow Warriors vs. SDSU Aztecs"], ["event_type", "Football"], ["state", "Hawaii"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:32:29.611396"], ["updated_at", "2017-09-14 21:32:29.611396"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "2017 Surf Championships"], ["event_type", "Misc"], ["state", "Hawaii"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:32:29.614071"], ["updated_at", "2017-09-14 21:32:29.614071"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Potato Eating Contest"], ["event_type", "Misc"], ["state", "Idaho"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:32:29.616579"], ["updated_at", "2017-09-14 21:32:29.616579"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Boise State Broncos vs. Oklahoma Sooners"], ["event_type", "Football"], ["state", "Idaho"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:32:29.618861"], ["updated_at", "2017-09-14 21:32:29.618861"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Chicago Bulls vs. Milwaukee Bucks"], ["event_type", "Basketball"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:32:29.621391"], ["updated_at", "2017-09-14 21:32:29.621391"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Chicago Cubs vs. St. Louis Cardinals"], ["event_type", "Baseball"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:32:29.625710"], ["updated_at", "2017-09-14 21:32:29.625710"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Willis Tower Tours"], ["event_type", "Misc"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:32:29.628908"], ["updated_at", "2017-09-14 21:32:29.628908"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Paul McCartney"], ["event_type", "Concert"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:32:29.631673"], ["updated_at", "2017-09-14 21:32:29.631673"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Indiana Pacers vs. Houston Rockets"], ["event_type", "Basketball"], ["state", "Indiana"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:32:29.634064"], ["updated_at", "2017-09-14 21:32:29.634064"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Indiana Hoosiers vs. Michigan Wolverines"], ["event_type", "Basketball"], ["state", "Indiana"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:32:29.636176"], ["updated_at", "2017-09-14 21:32:29.636176"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Indiana State Fair"], ["event_type", "Misc"], ["state", "Indiana"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:32:29.638884"], ["updated_at", "2017-09-14 21:32:29.638884"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Corn Maze Tour"], ["event_type", "Misc"], ["state", "Iowa"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:32:29.641945"], ["updated_at", "2017-09-14 21:32:29.641945"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kansas Jayhawks vs. Kentucky Wildcats"], ["event_type", "Basketball"], ["state", "Kansas"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:32:29.645053"], ["updated_at", "2017-09-14 21:32:29.645053"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kansas City Chiefs vs. Denver Broncos"], ["event_type", "Football"], ["state", "Kansas"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:32:29.647675"], ["updated_at", "2017-09-14 21:32:29.647675"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kansas City Royals vs. Detroit Tigers"], ["event_type", "Baseball"], ["state", "Kansas"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:32:29.650332"], ["updated_at", "2017-09-14 21:32:29.650332"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kentucky Wildcats vs. Memphis Tigers"], ["event_type", "Basketball"], ["state", "Kentucky"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:32:29.652623"], ["updated_at", "2017-09-14 21:32:29.652623"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Louisville Cardinals vs. St. Johns Red Storm"], ["event_type", "Basketball"], ["state", "Kentucky"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:32:29.655151"], ["updated_at", "2017-09-14 21:32:29.655151"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kenny Chesney"], ["event_type", "Concert"], ["state", "Kentucky"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:32:29.658625"], ["updated_at", "2017-09-14 21:32:29.658625"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New Orleans Saints vs. Tampa Bay Buccaneers"], ["event_type", "Football"], ["state", "Louisiana"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:32:29.661205"], ["updated_at", "2017-09-14 21:32:29.661205"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mardi Gras Float Parade"], ["event_type", "Misc"], ["state", "Louisiana"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:32:29.663525"], ["updated_at", "2017-09-14 21:32:29.663525"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Acadia National Park Tour"], ["event_type", "Misc"], ["state", "Maine"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:32:29.666120"], ["updated_at", "2017-09-14 21:32:29.666120"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Baltimore Ravens vs. Pittsburgh Steelers"], ["event_type", "Football"], ["state", "Maryland"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:32:29.668664"], ["updated_at", "2017-09-14 21:32:29.668664"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Maryland Terrapins vs. Duke Blue Devils"], ["event_type", "Basketball"], ["state", "Maryland"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:32:29.670953"], ["updated_at", "2017-09-14 21:32:29.670953"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jay Z"], ["event_type", "Concert"], ["state", "Maryland"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:32:29.674032"], ["updated_at", "2017-09-14 21:32:29.674032"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Boston Red Sox vs. New York Yankees"], ["event_type", "Baseball"], ["state", "Massachusetts"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:32:29.676810"], ["updated_at", "2017-09-14 21:32:29.676810"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New England Patriots vs. Indianapolis Colts"], ["event_type", "Football"], ["state", "Massachusetts"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:32:29.679514"], ["updated_at", "2017-09-14 21:32:29.679514"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Duck Tour"], ["event_type", "Misc"], ["state", "Massachusetts"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:32:29.682330"], ["updated_at", "2017-09-14 21:32:29.682330"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Minnesota Timberwolves vs. Milwaukee Bucks"], ["event_type", "Basketball"], ["state", "Minnesota"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:32:29.685689"], ["updated_at", "2017-09-14 21:32:29.685689"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Minnesota State Fair"], ["event_type", "Misc"], ["state", "Minnesota"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:32:29.689575"], ["updated_at", "2017-09-14 21:32:29.689575"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ole Miss Rebels vs. Vanderbilt Commodores"], ["event_type", "Football"], ["state", "Mississippi"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:32:29.692908"], ["updated_at", "2017-09-14 21:32:29.692908"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 17:32:35 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 21:32:29", updated_at: "2017-09-14 21:32:29">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (19.26ms)
+Completed 200 OK in 69ms (Views: 56.7ms | ActiveRecord: 9.6ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (209.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (201.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (404.3ms)[0m  [1m[35mCREATE DATABASE "tickettracker_development" ENCODING = 'unicode'[0m
+  [1m[35m (413.4ms)[0m  [1m[35mCREATE DATABASE "tickettracker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 21:33:14.709068"], ["updated_at", "2017-09-14 21:33:14.709068"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 21:33:14.796144"], ["updated_at", "2017-09-14 21:33:14.796144"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bruno Mars"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:33:14.851774"], ["updated_at", "2017-09-14 21:33:14.851774"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Jets vs. New England Patriots"], ["event_type", "Football"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:33:14.855285"], ["updated_at", "2017-09-14 21:33:14.855285"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bon Jovi"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:33:14.858034"], ["updated_at", "2017-09-14 21:33:14.858034"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Flatiron Presents"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:33:14.861997"], ["updated_at", "2017-09-14 21:33:14.861997"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Yankees vs. Boston Red Sox"], ["event_type", "Baseball"], ["state", "New York"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:33:14.864737"], ["updated_at", "2017-09-14 21:33:14.864737"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miami Dolphins vs. Buffalo Bills"], ["event_type", "Football"], ["state", "Florida"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:33:14.867225"], ["updated_at", "2017-09-14 21:33:14.867225"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carolina Panthers vs. Atlanta Falcons"], ["event_type", "Football"], ["state", "North Carolina"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:33:14.869552"], ["updated_at", "2017-09-14 21:33:14.869552"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Atlanta Falcons vs. New Orleans Saints"], ["event_type", "Football"], ["state", "Georgia"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:33:14.871743"], ["updated_at", "2017-09-14 21:33:14.871743"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Tigers vs. Kansas City Royals"], ["event_type", "Baseball"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:33:14.874129"], ["updated_at", "2017-09-14 21:33:14.874129"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Lions vs. Green Bay Packers"], ["event_type", "Football"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:33:14.876687"], ["updated_at", "2017-09-14 21:33:14.876687"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "University of Michigan vs. Ohio State Buckeyes"], ["event_type", "Football"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:33:14.880174"], ["updated_at", "2017-09-14 21:33:14.880174"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Los Angeles Chargers vs. Denver Broncos"], ["event_type", "Football"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:33:14.883150"], ["updated_at", "2017-09-14 21:33:14.883150"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Los Angeles Clippers vs. Los Angeles Lakers"], ["event_type", "Basketball"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:33:14.886260"], ["updated_at", "2017-09-14 21:33:14.886260"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Katy Perry"], ["event_type", "Concert"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:33:14.888837"], ["updated_at", "2017-09-14 21:33:14.888837"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Colorado Rockies vs. Arizona Diamondbacks"], ["event_type", "Baseball"], ["state", "Colorado"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:33:14.891712"], ["updated_at", "2017-09-14 21:33:14.891712"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Alabama Crimson Tide vs. LSU Tigers"], ["event_type", "Football"], ["state", "Alabama"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:33:14.895552"], ["updated_at", "2017-09-14 21:33:14.895552"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Iditarod Race of the Century"], ["event_type", "Misc"], ["state", "Alaska"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:33:14.898885"], ["updated_at", "2017-09-14 21:33:14.898885"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Arizona Cardinals vs. Seattle Seahawks"], ["event_type", "Football"], ["state", "Arizona"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:33:14.902312"], ["updated_at", "2017-09-14 21:33:14.902312"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Phoenix Suns vs. Sacramento Kings"], ["event_type", "Basketball"], ["state", "Arizona"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:33:14.905072"], ["updated_at", "2017-09-14 21:33:14.905072"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hilary Clinton Rally"], ["event_type", "Misc"], ["state", "Arkansas"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:33:14.908098"], ["updated_at", "2017-09-14 21:33:14.908098"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "UCONN Huskies vs. Rutgers Scarlet Knights"], ["event_type", "Basketball"], ["state", "Connecticut"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:33:14.912477"], ["updated_at", "2017-09-14 21:33:14.912477"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "PHISH"], ["event_type", "Concert"], ["state", "Connecticut"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:33:14.915217"], ["updated_at", "2017-09-14 21:33:14.915217"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "A Day in the Life of Joe Biden: The Joe Biden Experience"], ["event_type", "Misc"], ["state", "Delaware"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:33:14.917591"], ["updated_at", "2017-09-14 21:33:14.917591"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ultra Music Festival"], ["event_type", "Concert"], ["state", "Florida"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:33:14.920380"], ["updated_at", "2017-09-14 21:33:14.920380"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "On the Set: Walking Dead"], ["event_type", "Misc"], ["state", "Georgia"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:33:14.923678"], ["updated_at", "2017-09-14 21:33:14.923678"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hawaii Rainbow Warriors vs. SDSU Aztecs"], ["event_type", "Football"], ["state", "Hawaii"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:33:14.928502"], ["updated_at", "2017-09-14 21:33:14.928502"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "2017 Surf Championships"], ["event_type", "Misc"], ["state", "Hawaii"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:33:14.931871"], ["updated_at", "2017-09-14 21:33:14.931871"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Potato Eating Contest"], ["event_type", "Misc"], ["state", "Idaho"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:33:14.934801"], ["updated_at", "2017-09-14 21:33:14.934801"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Boise State Broncos vs. Oklahoma Sooners"], ["event_type", "Football"], ["state", "Idaho"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:33:14.938075"], ["updated_at", "2017-09-14 21:33:14.938075"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Chicago Bulls vs. Milwaukee Bucks"], ["event_type", "Basketball"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:33:14.941454"], ["updated_at", "2017-09-14 21:33:14.941454"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Chicago Cubs vs. St. Louis Cardinals"], ["event_type", "Baseball"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:33:14.945215"], ["updated_at", "2017-09-14 21:33:14.945215"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Willis Tower Tours"], ["event_type", "Misc"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:33:14.948124"], ["updated_at", "2017-09-14 21:33:14.948124"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Paul McCartney"], ["event_type", "Concert"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:33:14.950713"], ["updated_at", "2017-09-14 21:33:14.950713"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Indiana Pacers vs. Houston Rockets"], ["event_type", "Basketball"], ["state", "Indiana"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:33:14.953056"], ["updated_at", "2017-09-14 21:33:14.953056"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Indiana Hoosiers vs. Michigan Wolverines"], ["event_type", "Basketball"], ["state", "Indiana"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:33:14.955701"], ["updated_at", "2017-09-14 21:33:14.955701"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Indiana State Fair"], ["event_type", "Misc"], ["state", "Indiana"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:33:14.959724"], ["updated_at", "2017-09-14 21:33:14.959724"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Corn Maze Tour"], ["event_type", "Misc"], ["state", "Iowa"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:33:14.964257"], ["updated_at", "2017-09-14 21:33:14.964257"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kansas Jayhawks vs. Kentucky Wildcats"], ["event_type", "Basketball"], ["state", "Kansas"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:33:14.968014"], ["updated_at", "2017-09-14 21:33:14.968014"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kansas City Chiefs vs. Denver Broncos"], ["event_type", "Football"], ["state", "Kansas"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:33:14.970917"], ["updated_at", "2017-09-14 21:33:14.970917"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kansas City Royals vs. Detroit Tigers"], ["event_type", "Baseball"], ["state", "Kansas"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:33:14.973789"], ["updated_at", "2017-09-14 21:33:14.973789"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kentucky Wildcats vs. Memphis Tigers"], ["event_type", "Basketball"], ["state", "Kentucky"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:33:14.976721"], ["updated_at", "2017-09-14 21:33:14.976721"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Louisville Cardinals vs. St. Johns Red Storm"], ["event_type", "Basketball"], ["state", "Kentucky"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:33:14.980011"], ["updated_at", "2017-09-14 21:33:14.980011"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kenny Chesney"], ["event_type", "Concert"], ["state", "Kentucky"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:33:14.982948"], ["updated_at", "2017-09-14 21:33:14.982948"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New Orleans Saints vs. Tampa Bay Buccaneers"], ["event_type", "Football"], ["state", "Louisiana"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:33:14.986383"], ["updated_at", "2017-09-14 21:33:14.986383"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mardi Gras Float Parade"], ["event_type", "Misc"], ["state", "Louisiana"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 21:33:14.989215"], ["updated_at", "2017-09-14 21:33:14.989215"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Acadia National Park Tour"], ["event_type", "Misc"], ["state", "Maine"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 21:33:14.993205"], ["updated_at", "2017-09-14 21:33:14.993205"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Baltimore Ravens vs. Pittsburgh Steelers"], ["event_type", "Football"], ["state", "Maryland"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 21:33:14.996430"], ["updated_at", "2017-09-14 21:33:14.996430"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Maryland Terrapins vs. Duke Blue Devils"], ["event_type", "Basketball"], ["state", "Maryland"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 21:33:14.999274"], ["updated_at", "2017-09-14 21:33:14.999274"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jay Z"], ["event_type", "Concert"], ["state", "Maryland"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 21:33:15.002034"], ["updated_at", "2017-09-14 21:33:15.002034"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Boston Red Sox vs. New York Yankees"], ["event_type", "Baseball"], ["state", "Massachusetts"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 21:33:15.005756"], ["updated_at", "2017-09-14 21:33:15.005756"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New England Patriots vs. Indianapolis Colts"], ["event_type", "Football"], ["state", "Massachusetts"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 21:33:15.009535"], ["updated_at", "2017-09-14 21:33:15.009535"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Duck Tour"], ["event_type", "Misc"], ["state", "Massachusetts"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 21:33:15.013854"], ["updated_at", "2017-09-14 21:33:15.013854"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Minnesota Timberwolves vs. Milwaukee Bucks"], ["event_type", "Basketball"], ["state", "Minnesota"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 21:33:15.016832"], ["updated_at", "2017-09-14 21:33:15.016832"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Minnesota State Fair"], ["event_type", "Misc"], ["state", "Minnesota"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 21:33:15.019688"], ["updated_at", "2017-09-14 21:33:15.019688"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ole Miss Rebels vs. Vanderbilt Commodores"], ["event_type", "Football"], ["state", "Mississippi"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 21:33:15.023217"], ["updated_at", "2017-09-14 21:33:15.023217"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 17:33:20 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 21:33:14", updated_at: "2017-09-14 21:33:14">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (19.08ms)
+Completed 200 OK in 62ms (Views: 49.1ms | ActiveRecord: 9.2ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (202.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_development"[0m
+  [1m[35m (154.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tickettracker_test"[0m
+  [1m[35m (427.1ms)[0m  [1m[35mCREATE DATABASE "tickettracker_development" ENCODING = 'unicode'[0m
+  [1m[35m (420.3ms)[0m  [1m[35mCREATE DATABASE "tickettracker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 22:04:49.070970"], ["updated_at", "2017-09-14 22:04:49.070970"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "event_type" character varying, "state" character varying, "zip" integer, "price" integer, "lat" float, "lng" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170912152617)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-14 22:04:49.147259"], ["updated_at", "2017-09-14 22:04:49.147259"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bruno Mars"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.682756], ["lng", -73.975013], ["created_at", "2017-09-14 22:04:49.199361"], ["updated_at", "2017-09-14 22:04:49.199361"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Jets vs. New England Patriots"], ["event_type", "Football"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.813717], ["lng", -74.074166], ["created_at", "2017-09-14 22:04:49.203120"], ["updated_at", "2017-09-14 22:04:49.203120"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bon Jovi"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.751512], ["lng", -73.993396], ["created_at", "2017-09-14 22:04:49.205626"], ["updated_at", "2017-09-14 22:04:49.205626"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Flatiron Presents"], ["event_type", "Concert"], ["state", "New York"], ["zip", 11021], ["price", 100], ["lat", 40.706223], ["lng", -74.01381], ["created_at", "2017-09-14 22:04:49.207948"], ["updated_at", "2017-09-14 22:04:49.207948"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York Yankees vs. Boston Red Sox"], ["event_type", "Baseball"], ["state", "New York"], ["zip", 10451], ["price", 200], ["lat", 40.82987], ["lng", -73.926175], ["created_at", "2017-09-14 22:04:49.210078"], ["updated_at", "2017-09-14 22:04:49.210078"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Miami Dolphins vs. Buffalo Bills"], ["event_type", "Football"], ["state", "Florida"], ["zip", 48104], ["price", 150], ["lat", 25.957986], ["lng", -80.238828], ["created_at", "2017-09-14 22:04:49.213647"], ["updated_at", "2017-09-14 22:04:49.213647"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Carolina Panthers vs. Atlanta Falcons"], ["event_type", "Football"], ["state", "North Carolina"], ["zip", 48104], ["price", 150], ["lat", 35.225024], ["lng", -80.851861], ["created_at", "2017-09-14 22:04:49.216457"], ["updated_at", "2017-09-14 22:04:49.216457"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Atlanta Falcons vs. New Orleans Saints"], ["event_type", "Football"], ["state", "Georgia"], ["zip", 48104], ["price", 150], ["lat", 33.755449], ["lng", -84.401033], ["created_at", "2017-09-14 22:04:49.218894"], ["updated_at", "2017-09-14 22:04:49.218894"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Tigers vs. Kansas City Royals"], ["event_type", "Baseball"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.339], ["lng", -83.048525], ["created_at", "2017-09-14 22:04:49.221218"], ["updated_at", "2017-09-14 22:04:49.221218"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Detroit Lions vs. Green Bay Packers"], ["event_type", "Football"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.340011], ["lng", -83.045603], ["created_at", "2017-09-14 22:04:49.223882"], ["updated_at", "2017-09-14 22:04:49.223882"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "University of Michigan vs. Ohio State Buckeyes"], ["event_type", "Football"], ["state", "Michigan"], ["zip", 48104], ["price", 150], ["lat", 42.266694], ["lng", -83.748481], ["created_at", "2017-09-14 22:04:49.227166"], ["updated_at", "2017-09-14 22:04:49.227166"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Los Angeles Chargers vs. Denver Broncos"], ["event_type", "Football"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 32.783103], ["lng", -117.119593], ["created_at", "2017-09-14 22:04:49.230465"], ["updated_at", "2017-09-14 22:04:49.230465"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Los Angeles Clippers vs. Los Angeles Lakers"], ["event_type", "Basketball"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 34.043], ["lng", -118.267222], ["created_at", "2017-09-14 22:04:49.233452"], ["updated_at", "2017-09-14 22:04:49.233452"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Katy Perry"], ["event_type", "Concert"], ["state", "California"], ["zip", 11021], ["price", 100], ["lat", 34.102678], ["lng", -118.340418], ["created_at", "2017-09-14 22:04:49.236436"], ["updated_at", "2017-09-14 22:04:49.236436"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Colorado Rockies vs. Arizona Diamondbacks"], ["event_type", "Baseball"], ["state", "Colorado"], ["zip", 11021], ["price", 100], ["lat", 39.755891], ["lng", -104.994178], ["created_at", "2017-09-14 22:04:49.239246"], ["updated_at", "2017-09-14 22:04:49.239246"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Alabama Crimson Tide vs. LSU Tigers"], ["event_type", "Football"], ["state", "Alabama"], ["zip", 10451], ["price", 200], ["lat", 33.20823], ["lng", -87.550405], ["created_at", "2017-09-14 22:04:49.242688"], ["updated_at", "2017-09-14 22:04:49.242688"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Iditarod Race of the Century"], ["event_type", "Misc"], ["state", "Alaska"], ["zip", 48104], ["price", 150], ["lat", 61.195917], ["lng", -149.90726], ["created_at", "2017-09-14 22:04:49.245872"], ["updated_at", "2017-09-14 22:04:49.245872"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Arizona Cardinals vs. Seattle Seahawks"], ["event_type", "Football"], ["state", "Arizona"], ["zip", 48104], ["price", 150], ["lat", 33.527607], ["lng", -112.262484], ["created_at", "2017-09-14 22:04:49.248794"], ["updated_at", "2017-09-14 22:04:49.248794"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Phoenix Suns vs. Sacramento Kings"], ["event_type", "Basketball"], ["state", "Arizona"], ["zip", 48104], ["price", 150], ["lat", 33.445853], ["lng", -112.071197], ["created_at", "2017-09-14 22:04:49.251526"], ["updated_at", "2017-09-14 22:04:49.251526"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hilary Clinton Rally"], ["event_type", "Misc"], ["state", "Arkansas"], ["zip", 48104], ["price", 150], ["lat", 34.746417], ["lng", -92.258384], ["created_at", "2017-09-14 22:04:49.254054"], ["updated_at", "2017-09-14 22:04:49.254054"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "UCONN Huskies vs. Rutgers Scarlet Knights"], ["event_type", "Basketball"], ["state", "Connecticut"], ["zip", 48104], ["price", 150], ["lat", 41.75945], ["lng", -72.61837], ["created_at", "2017-09-14 22:04:49.256410"], ["updated_at", "2017-09-14 22:04:49.256410"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "PHISH"], ["event_type", "Concert"], ["state", "Connecticut"], ["zip", 48104], ["price", 150], ["lat", 41.491776], ["lng", -72.090261], ["created_at", "2017-09-14 22:04:49.258707"], ["updated_at", "2017-09-14 22:04:49.258707"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "A Day in the Life of Joe Biden: The Joe Biden Experience"], ["event_type", "Misc"], ["state", "Delaware"], ["zip", 11021], ["price", 100], ["lat", 38.716629], ["lng", -75.083467], ["created_at", "2017-09-14 22:04:49.261189"], ["updated_at", "2017-09-14 22:04:49.261189"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ultra Music Festival"], ["event_type", "Concert"], ["state", "Florida"], ["zip", 11021], ["price", 100], ["lat", 25.777055], ["lng", -80.187405], ["created_at", "2017-09-14 22:04:49.264125"], ["updated_at", "2017-09-14 22:04:49.264125"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "On the Set: Walking Dead"], ["event_type", "Misc"], ["state", "Georgia"], ["zip", 11021], ["price", 100], ["lat", 32.831548], ["lng", -83.647054], ["created_at", "2017-09-14 22:04:49.267622"], ["updated_at", "2017-09-14 22:04:49.267622"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "NFL Pro Bowl"], ["event_type", "Football"], ["state", "Hawaii"], ["zip", 11021], ["price", 100], ["lat", 21.372784], ["lng", -157.929943], ["created_at", "2017-09-14 22:04:49.271165"], ["updated_at", "2017-09-14 22:04:49.271165"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "2017 Surf Championships"], ["event_type", "Misc"], ["state", "Hawaii"], ["zip", 10451], ["price", 200], ["lat", 21.281914], ["lng", -157.828228], ["created_at", "2017-09-14 22:04:49.275003"], ["updated_at", "2017-09-14 22:04:49.275003"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Potato Eating Contest"], ["event_type", "Misc"], ["state", "Idaho"], ["zip", 48104], ["price", 150], ["lat", 43.59935], ["lng", -116.200527], ["created_at", "2017-09-14 22:04:49.278830"], ["updated_at", "2017-09-14 22:04:49.278830"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Boise State Broncos vs. Oklahoma Sooners"], ["event_type", "Football"], ["state", "Idaho"], ["zip", 48104], ["price", 150], ["lat", 43.602876], ["lng", -116.195839], ["created_at", "2017-09-14 22:04:49.282410"], ["updated_at", "2017-09-14 22:04:49.282410"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Chicago Bulls vs. Milwaukee Bucks"], ["event_type", "Basketball"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 41.880687], ["lng", -87.674165], ["created_at", "2017-09-14 22:04:49.286320"], ["updated_at", "2017-09-14 22:04:49.286320"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Chicago Cubs vs. St. Louis Cardinals"], ["event_type", "Baseball"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 41.948437], ["lng", -87.655327], ["created_at", "2017-09-14 22:04:49.289819"], ["updated_at", "2017-09-14 22:04:49.289819"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Willis Tower Tours"], ["event_type", "Misc"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 41.878721], ["lng", -87.63591], ["created_at", "2017-09-14 22:04:49.292844"], ["updated_at", "2017-09-14 22:04:49.292844"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Paul McCartney"], ["event_type", "Concert"], ["state", "Illinois"], ["zip", 48104], ["price", 150], ["lat", 41.948437], ["lng", -87.655327], ["created_at", "2017-09-14 22:04:49.296390"], ["updated_at", "2017-09-14 22:04:49.296390"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Indiana Pacers vs. Houston Rockets"], ["event_type", "Basketball"], ["state", "Indiana"], ["zip", 11021], ["price", 100], ["lat", 39.763929], ["lng", -86.155458], ["created_at", "2017-09-14 22:04:49.299411"], ["updated_at", "2017-09-14 22:04:49.299411"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Indiana Hoosiers vs. Michigan Wolverines"], ["event_type", "Basketball"], ["state", "Indiana"], ["zip", 11021], ["price", 100], ["lat", 39.18086], ["lng", -86.522149], ["created_at", "2017-09-14 22:04:49.302143"], ["updated_at", "2017-09-14 22:04:49.302143"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Indiana State Fair"], ["event_type", "Misc"], ["state", "Indiana"], ["zip", 11021], ["price", 100], ["lat", 39.825563], ["lng", -86.13704], ["created_at", "2017-09-14 22:04:49.305186"], ["updated_at", "2017-09-14 22:04:49.305186"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Corn Maze Tour"], ["event_type", "Misc"], ["state", "Iowa"], ["zip", 11021], ["price", 100], ["lat", 41.658403], ["lng", -93.358013], ["created_at", "2017-09-14 22:04:49.309013"], ["updated_at", "2017-09-14 22:04:49.309013"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kansas Jayhawks vs. Kentucky Wildcats"], ["event_type", "Basketball"], ["state", "Kansas"], ["zip", 10451], ["price", 200], ["lat", 38.954289], ["lng", -95.252797], ["created_at", "2017-09-14 22:04:49.312662"], ["updated_at", "2017-09-14 22:04:49.312662"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kansas City Chiefs vs. Denver Broncos"], ["event_type", "Football"], ["state", "Kansas"], ["zip", 48104], ["price", 150], ["lat", 39.048937], ["lng", -94.483908], ["created_at", "2017-09-14 22:04:49.316117"], ["updated_at", "2017-09-14 22:04:49.316117"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kansas City Royals vs. Detroit Tigers"], ["event_type", "Baseball"], ["state", "Kansas"], ["zip", 48104], ["price", 150], ["lat", 39.051668], ["lng", -94.480309], ["created_at", "2017-09-14 22:04:49.319224"], ["updated_at", "2017-09-14 22:04:49.319224"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kentucky Wildcats vs. Memphis Tigers"], ["event_type", "Basketball"], ["state", "Kentucky"], ["zip", 48104], ["price", 150], ["lat", 38.049402], ["lng", -84.50246], ["created_at", "2017-09-14 22:04:49.322671"], ["updated_at", "2017-09-14 22:04:49.322671"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Louisville Cardinals vs. St. Johns Red Storm"], ["event_type", "Basketball"], ["state", "Kentucky"], ["zip", 48104], ["price", 150], ["lat", 38.257783], ["lng", -85.75383], ["created_at", "2017-09-14 22:04:49.326397"], ["updated_at", "2017-09-14 22:04:49.326397"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kenny Chesney"], ["event_type", "Concert"], ["state", "Kentucky"], ["zip", 48104], ["price", 150], ["lat", 38.257783], ["lng", -85.75383], ["created_at", "2017-09-14 22:04:49.329580"], ["updated_at", "2017-09-14 22:04:49.329580"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New Orleans Saints vs. Tampa Bay Buccaneers"], ["event_type", "Football"], ["state", "Louisiana"], ["zip", 48104], ["price", 150], ["lat", 29.951052], ["lng", -90.081238], ["created_at", "2017-09-14 22:04:49.333215"], ["updated_at", "2017-09-14 22:04:49.333215"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mardi Gras Float Parade"], ["event_type", "Misc"], ["state", "Louisiana"], ["zip", 11021], ["price", 100], ["lat", 29.958207], ["lng", -90.065199], ["created_at", "2017-09-14 22:04:49.336377"], ["updated_at", "2017-09-14 22:04:49.336377"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Acadia National Park Tour"], ["event_type", "Misc"], ["state", "Maine"], ["zip", 11021], ["price", 100], ["lat", 44.320569], ["lng", -68.253495], ["created_at", "2017-09-14 22:04:49.340076"], ["updated_at", "2017-09-14 22:04:49.340076"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Baltimore Ravens vs. Pittsburgh Steelers"], ["event_type", "Football"], ["state", "Maryland"], ["zip", 11021], ["price", 100], ["lat", 39.277974], ["lng", -76.6227], ["created_at", "2017-09-14 22:04:49.343026"], ["updated_at", "2017-09-14 22:04:49.343026"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Maryland Terrapins vs. Duke Blue Devils"], ["event_type", "Basketball"], ["state", "Maryland"], ["zip", 11021], ["price", 100], ["lat", 38.898123], ["lng", -77.020881], ["created_at", "2017-09-14 22:04:49.345643"], ["updated_at", "2017-09-14 22:04:49.345643"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jay Z"], ["event_type", "Concert"], ["state", "Maryland"], ["zip", 10451], ["price", 200], ["lat", 39.277974], ["lng", -76.6227], ["created_at", "2017-09-14 22:04:49.348378"], ["updated_at", "2017-09-14 22:04:49.348378"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Boston Red Sox vs. New York Yankees"], ["event_type", "Baseball"], ["state", "Massachusetts"], ["zip", 48104], ["price", 150], ["lat", 42.346667], ["lng", -71.097216], ["created_at", "2017-09-14 22:04:49.351210"], ["updated_at", "2017-09-14 22:04:49.351210"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New England Patriots vs. Indianapolis Colts"], ["event_type", "Football"], ["state", "Massachusetts"], ["zip", 48104], ["price", 150], ["lat", 42.090935], ["lng", 42.090935], ["created_at", "2017-09-14 22:04:49.353672"], ["updated_at", "2017-09-14 22:04:49.353672"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Duck Tour"], ["event_type", "Misc"], ["state", "Massachusetts"], ["zip", 48104], ["price", 150], ["lat", 42.347149], ["lng", -71.07876], ["created_at", "2017-09-14 22:04:49.356139"], ["updated_at", "2017-09-14 22:04:49.356139"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Minnesota Timberwolves vs. Milwaukee Bucks"], ["event_type", "Basketball"], ["state", "Minnesota"], ["zip", 48104], ["price", 150], ["lat", 44.979446], ["lng", -93.27619], ["created_at", "2017-09-14 22:04:49.358560"], ["updated_at", "2017-09-14 22:04:49.358560"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Minnesota State Fair"], ["event_type", "Misc"], ["state", "Minnesota"], ["zip", 48104], ["price", 150], ["lat", 44.988028], ["lng", -93.168842], ["created_at", "2017-09-14 22:04:49.361227"], ["updated_at", "2017-09-14 22:04:49.361227"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "events" ("name", "event_type", "state", "zip", "price", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ole Miss Rebels vs. Vanderbilt Commodores"], ["event_type", "Football"], ["state", "Mississippi"], ["zip", 48104], ["price", 150], ["lat", 34.361983], ["lng", -89.534208], ["created_at", "2017-09-14 22:04:49.364277"], ["updated_at", "2017-09-14 22:04:49.364277"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:04:56 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (28.8ms)
+Completed 200 OK in 93ms (Views: 73.5ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:10:20 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (24.04ms)
+Completed 200 OK in 64ms (Views: 47.5ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:11:13 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (4.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (27.7ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:11:45 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (20.81ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:13:11 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (20.82ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:16:43 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (39.06ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:16:58 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (12.69ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:18:12 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (15.19ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:18:23 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (3.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (19.03ms)
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/events" for 127.0.0.1 at 2017-09-14 18:18:51 -0400
+Processing by Api::V1::EventsController#index as */*
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+No serializer found for resource: #<Event id: 1, name: "Bruno Mars", event_type: "Concert", state: "New York", zip: 11021, price: 100, lat: 40.682756, lng: -73.975013, created_at: "2017-09-14 22:04:49", updated_at: "2017-09-14 22:04:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (21.61ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 1.0ms)
+
+

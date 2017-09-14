@@ -6,6 +6,8 @@ class CreateEvents < ActiveRecord::Migration[5.1]
       t.string :state
       t.integer :zip
       t.integer :price
+      t.float :lat
+      t.float :lng
       t.timestamps
     end
   end

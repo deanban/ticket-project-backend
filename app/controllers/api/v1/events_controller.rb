@@ -18,7 +18,7 @@ end
 
 private
 def event_params
-    params.permit(:name, :event_type, :state, :zip, :price)
+    params.permit(:name, :event_type, :state, :zip, :price, :lat, :lng)
   end
 
 end
