@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20170912152617) do
     t.string "state"
     t.integer "zip"
     t.integer "price"
+    t.float "lat"
+    t.float "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
